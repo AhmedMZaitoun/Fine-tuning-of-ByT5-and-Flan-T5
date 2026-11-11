@@ -1,0 +1,2 @@
+#!/bin/bash
+python peft_flant5_infer.py --adapter_path "output/flant5-prodsep-ch-e50-lr01-adaf-lin-b64-train-lora-r8-a16-d0/" --model_path "pretrained_models/flant5-base-prod-sep-model/" --print_predictions --test_path "data/photo/test.xlsx" --seed 42 --smiles_check "no" --infer_batch 32 --max_new_tokens 96 --max_length 192 --num_return_sequences 5 --num_beams 5 --num_beam_groups 1 --top_k 10 --top_p 0.8 --penalty_alpha 0.6 --diversity_penalty 1.0 --length_penalty -4 --temperature 1.0 --tokenization "none" --infer_mode "search_beam"	
